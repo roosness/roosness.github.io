@@ -10,14 +10,17 @@ router = {
 
     routie({
       'steden-:id' : function() {
+        template.init('loading');
         var id = window.location.hash;
             id = id.slice( 8 );
         api.listRequest(id, 'lijst');
       },
       'steden' : function() {
+        template.init('loading');
         console.log('lijst');
       },
       'detail-:id' : function () {
+        template.init('loading');
         var id = window.location.hash;
             id = id.slice( 8 );
         api.singleRequest(id, 'detail');

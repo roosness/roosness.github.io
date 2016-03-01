@@ -117,7 +117,8 @@ nav {
   height: 100%;
   z-index: 9;
   width: 20%;
-  right: -30%;
+  min-width: 15em;
+  right: -100vw;
   padding-top: 3rem;
   box-sizing: border-box;
   display: -webkit-flex;
@@ -391,6 +392,7 @@ nav form label span {
   padding: 1rem;
   margin: .5rem auto;
   max-width: 50em;
+  box-sizing: borde-box;
 }
 
 .detail-template-wrapper header {
@@ -493,4 +495,13 @@ nav form label span {
   color: white;
   text-decoration: none;
   padding: .5rem;
+}
+
+.loading-container {
+  width: 100%;
+}
+
+.loading-container img {
+  min-width: 100%;
+  max-width: 100%;
 }
