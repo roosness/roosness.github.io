@@ -32,12 +32,15 @@ Zo kunnen de afbeeldingen geoptimaliseerd worden. Deze zijn momenteel namelijk v
 ### Cookies
 De wesbite maakt geen gebruik van cookies.
 
-### wifi/hotspots
-
 ### content blockers
+Zowel de adblocker, adult blocker en content blockers veranderen niets aan de website.
+
 ### Local Storage
+De website maakt geen gebruik van local storage.
+
 ### CDN
-### Adblockers
+Momenteel maak ik nog gebruik van een iconfont, dat via cdn wordt ingeladen. Dit zal in de toekomst aangepast worden naar reguliere iconen, en dan is dit niet meer nodig.
+
 ### muis/trackpad
 De website is over het algemeen goed te gebruiken met alleen een tab toets. Elke link heeft zijn :focus nogsteeds. Echter is de navigatie niet te bereiken. Hier wordt namelijk een <i> gebruikt inplaats van een <a>, en dit moet aangepast worden.
 todo:
