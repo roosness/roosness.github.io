@@ -15,17 +15,23 @@ Daarnaast maak ik gebruik van een webfont van de huisstijl van funda, hier kan e
 todo: 
 - icon font veranderen in echte iconen. 
 - font stack
+ 
+
 ### Javascript
 Als javascript geblokkeerd wordt is de website volledig onbruikbaar. De navigatie en de content worden hiermee gestuurd.
 Als kleine oplossing zou er een noscript aan kunnen worden toegevoegd die aangeeft dat de gebruiker de website niet kan gebruiken als deze de javascript heeft uitgeschakeld.
+
 ### Kleur
 Bij het testen met verschillende vormen van kleurenblindheid kwam naar voren dat het kleurcontrast duidelijk is. 
 In de navigatie zou deze eventueel iets vergroot kunnen worden, maar over het algemeen is de website nog gewoon te gebruiken.
+
 ### Breedband internet
 Het laden van de website via een trage 2g gaat naar verwachting niet bepaald snel. Wel wordt direct de layout laten zien, waardoor de gebruiker weet dat er iets gebeurt. Toch kan de performance wel flink omhoog. Hier zal in de toekomst aan gewerkt worden.
 Zo kunnen de afbeeldingen geoptimaliseerd worden. Deze zijn momenteel namelijk velen malen groter dan ze op het scherm weergegeven worden. 
+
 ### Cookies
 De wesbite maakt geen gebruik van cookies.
+
 ### wifi/hotspots
 
 ### content blockers
