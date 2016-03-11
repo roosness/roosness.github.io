@@ -9,7 +9,7 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7f1f5', endColorstr='#ffffff',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
   background-size: contain;
-  font-family: 'Oxygen', Arial sans-serif;
+  font-family: 'Oxygen', Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
