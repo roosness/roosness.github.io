@@ -10,11 +10,10 @@ var math = {
 	gemiddelde : function (dataset) {
 		console.log('start gemiddelde')
 		var totaalPrijs = 0;
-		var prijzenArray = [];
-		var idArray = [];
+		var prijzenArray = []
+
 		for (var i = 0; i < dataset.Objects.length; i++) {
 			prijzenArray.push(dataset.Objects[i].Koopprijs);
-			idArray.push(dataset.Objects[i].Id);
 			totaalPrijs += dataset.Objects[i].Koopprijs;
 		}
 
@@ -22,15 +21,13 @@ var math = {
 			gemiddeld: totaalPrijs / dataset.Objects.length,
 			hoogste: Math.max.apply(Math, prijzenArray),
 			laagste: Math.min.apply(Math, prijzenArray),
-			prijzenArray: prijzenArray,
-			idArray: idArray
 		}
 		prijzenHolder.gemiddeldPerc = (prijzenHolder.gemiddeld * 100) / prijzenHolder.hoogste
-		
+		console.log(prijzenHolder);
 		return prijzenHolder
 	},
 	isduurder : function (dataset, prijzenHolder) {
-		
+		console.log('start isduurder' + prijzenHolder)
 		for (var i = 0; i < dataset.Objects.length; i++) {
 			dataset.Objects[i].percentageKoopPrijs = (dataset.Objects[i].Koopprijs * 100) / prijzenHolder.hoogste;
 			if (dataset.Objects[i].Koopprijs >= prijzenHolder.gemiddeld) {

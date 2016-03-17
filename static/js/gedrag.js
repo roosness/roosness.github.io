@@ -1,22 +1,7 @@
 gedrag = {
 	init: function() {
-		console.log('gedrag.init');
-		var navknop = document.querySelector("#nav-button");
-		var navLinks = document.querySelector("nav a");
-		var nav = document.querySelector('nav');
-		var body = document.querySelector('main');
-		body.onclick = function() {
-			nav.classList.remove('show');
-		}
-		navknop.onclick = function() {
-			console.log('click');
-			nav.classList.toggle('show');
-
-		}
-		navLinks.onclick = function () {
-			console.log('click');
-			nav.classList.remove('show');
-		}
+		console.log('gedrag.init();');
+		gedrag.navigation();
 
 		Handlebars.registerHelper('html_decoder', function(text) {
 		  var str = unescape(text).replace(/&amp;/g, '&');
@@ -25,44 +10,24 @@ gedrag = {
 		  div.innerHTML = str;
 		  return div.firstChild.nodeValue; 
 		});
+		
+	},
+	navigation: function() {
+		console.log('gedrag.navigation()');
+		var nav_button = document.querySelector('.nav_button');
+		var nav = document.querySelector('nav');
 
-		function grafiek() {
+		if (window.innerWidth < 600) {
+			nav.classList.remove('regNav');
+			nav_button.classList.remove('remove');
+			nav.classList.add('sideNav');
+			nav_button.href = "javascript:void(0)";
 
-var data = [4, 8, 15, 16, 23, 42];
-
-var width = 420,
-    barHeight = 20;
-
-var x = d3.scale.linear()
-    .domain([0, d3.max(data)])
-    .range([0, width]);
-
-var chart = d3.select(".chart")
-    .attr("width", width)
-    .attr("height", barHeight * data.length);
-
-var bar = chart.selectAll("g")
-    .data(data)
-  .enter().append("g")
-    .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; });
-
-bar.append("rect")
-    .attr("width", x)
-    .attr("height", barHeight - 1);
-
-bar.append("text")
-    .attr("x", function(d) { return x(d) - 3; })
-    .attr("y", barHeight / 2)
-    .attr("dy", ".35em")
-    .text(function(d) { return d; });
-    console.log(bar);
-
-
-    return chart
+			nav_button.addEventListener('click', function(){
+				nav.classList.toggle('navOpen');
+			});
 		}
 
-		 Handlebars.registerHelper('list', function() {
- 			return grafiek();;
-})
-		}
+		
+	}
 }
